@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
               backgroundColor: Colors.black12,
               child: Icon(Icons.face, size: 50, color: Colors.teal),
             ),
-            const SizedBox(height: 16), // Perbaikan bug: width diubah ke height
+            const SizedBox(height: 16), 
             Column(
               children: [
                 Text(
