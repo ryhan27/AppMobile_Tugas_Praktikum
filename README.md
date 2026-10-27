@@ -1,17 +1,9 @@
-# tugas_praktikum
+# Laporan Perbaikan Kode (Debugging) - Aplikasi Profil Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Nama:** Muhamad Rayhan Ramadhansyah  
+**NIM:** 1124160086  
+**Kelas:** TI24-P SE 2  
+**Prodi:** Teknik Informatika  
+**Konsentrasi:** Software Engineering  
+**Tugas:** Praktikum 5 (Extract Widget & Debugging)
+perbaikan yang telah saya lakukan agar aplikasi dapat di-kompilasi dan berjalan dengan baik:
