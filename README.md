@@ -6,4 +6,4 @@
 **Prodi:** Teknik Informatika  
 **Konsentrasi:** Software Engineering  
 **Tugas:** Praktikum 5 (Extract Widget & Debugging)
-perbaikan yang telah saya lakukan agar aplikasi dapat di-kompilasi dan berjalan dengan baik:
+Hari 1 (Pagi): Membangun kerangka dasar Scaffold, Avatar, Text, dan memperbaiki error SizedBox.
