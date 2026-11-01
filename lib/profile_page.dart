@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
- const ProfilePage({super.key});
+  const ProfilePage({super.key});
 
   final String userName = 'Muhamad Rayhan Ramadhansyah';
   final String role = 'Mahasiswa Teknik Informatika & Software Engineer';
-  final List<String> experiences = const[
+  
+  // PERBAIKAN: Tambahkan kata kunci 'const' sebelum kurung siku [
+  final List<String> experiences = const [
     'Mobile Developer - Aplikasi Kampus',
-    'Fullstack Web - SI RT/RW',
     'Backend - Jaya Laundry UMKM',
   ];
 
@@ -44,19 +45,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Divider(),
-            // Perbaikan bug: dibungkus Expanded agar tidak Overflow
             Expanded(
               child: ListView.builder(
                 itemCount: experiences.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 2,
-                    margin: const EdgeInsets.symmetric(vertical: 6),
-                    child: ListTile(
-                      leading: const Icon(Icons.work, color: Colors.teal),
-                      title: Text(experiences[index]),
-                    ),
-                  );
+                  return ExperienceCard(title: experiences[index]);
                 },
               ),
             ),
@@ -164,6 +157,27 @@ class StatItem extends StatelessWidget {
           style: TextStyle(color: Colors.grey[600]),
         ),
       ],
+    );
+  }
+}
+
+class ExperienceCard extends StatelessWidget {
+  final String title;
+
+  const ExperienceCard({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      child: ListTile(
+        leading: const Icon(Icons.work_history, color: Colors.teal),
+        title: Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.w500),
+        ),
+      ),
     );
   }
 }
