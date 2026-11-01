@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+ const ProfilePage({super.key});
 
   final String userName = 'Muhamad Rayhan Ramadhansyah';
   final String role = 'Mahasiswa Teknik Informatika & Software Engineer';
+  final List<String> experiences = const[
+    'Mobile Developer - Aplikasi Kampus',
+    'Fullstack Web - SI RT/RW',
+    'Backend - Jaya Laundry UMKM',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +35,31 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             const ProfileStats(),
+            const SizedBox(height: 24),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Pengalaman Kerja',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const Divider(),
+            // Perbaikan bug: dibungkus Expanded agar tidak Overflow
+            Expanded(
+              child: ListView.builder(
+                itemCount: experiences.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    elevation: 2,
+                    margin: const EdgeInsets.symmetric(vertical: 6),
+                    child: ListTile(
+                      leading: const Icon(Icons.work, color: Colors.teal),
+                      title: Text(experiences[index]),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
