@@ -2,7 +2,6 @@
 
 Proyek pembuatan antarmuka aplikasi profil menggunakan framework Flutter. Praktikum ini difokuskan pada manajemen tata letak (*layouting*), modularisasi komponen (*Extract Widget*), serta penyelesaian masalah (*debugging*) pada kode.
 
-## 👤 Identitas Mahasiswa
 - **Nama:** Muhamad Rayhan Ramadhansyah
 - **NIM:** 1124160086
 - **Kelas:** TI24-P SE 2
@@ -11,7 +10,7 @@ Proyek pembuatan antarmuka aplikasi profil menggunakan framework Flutter. Prakti
 
 ---
 
-## 📅 Jurnal Kegiatan & Riwayat Commit
+## Riwayat Commit
 
 ### Hari 1
 * **Commit 1: `feat: create basic profile page structure with avatar and text`**
