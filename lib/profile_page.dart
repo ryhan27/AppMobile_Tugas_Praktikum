@@ -7,10 +7,8 @@ class ProfilePage extends StatelessWidget {
   final String role = 'Mahasiswa Teknik Informatika & Software Engineer';
   final List<String> experiences = const [
     'Mobile Developer - Aplikasi Kampus',
-    'Fullstack Web - SI RT/RW',
-    'Web Developer - Crypto TopUp',
+    'Backend- Sistem Web RT/RW',
     'Backend - Jaya Laundry UMKM',
-    'SysAdmin - ERPNext v16 Docker',
   ];
 
   @override
@@ -23,17 +21,24 @@ class ProfilePage extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0), // Padding dirapikan
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0), 
         child: Column(
           children: [
             const ProfileAvatar(),
             const SizedBox(height: 16),
             ProfileInfo(name: userName, role: role),
-            const SizedBox(height: 24), // Jarak proporsional
+            const SizedBox(height: 24),
             
-            // Tombol edit MASIH KOSONG fungsinya
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Fitur edit belum aktif pada modul statis.'),
+                    duration: Duration(seconds: 2),
+                    backgroundColor: Colors.teal,
+                  ),
+                );
+              },
               icon: const Icon(Icons.edit),
               label: const Text('Edit Profil'),
             ),
@@ -124,9 +129,9 @@ class ProfileStats extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          StatItem(count: '15', label: 'Proyek'),
-          StatItem(count: '1.2K', label: 'Followers'),
-          StatItem(count: '42', label: 'Following'),
+          StatItem(count: '3', label: 'Proyek'),
+          StatItem(count: '5', label: 'Followers'),
+          StatItem(count: '10', label: 'Following'),
         ],
       ),
     );
