@@ -5,11 +5,12 @@ class ProfilePage extends StatelessWidget {
 
   final String userName = 'Muhamad Rayhan Ramadhansyah';
   final String role = 'Mahasiswa Teknik Informatika & Software Engineer';
-  
-  // PERBAIKAN: Tambahkan kata kunci 'const' sebelum kurung siku [
   final List<String> experiences = const [
     'Mobile Developer - Aplikasi Kampus',
+    'Fullstack Web - SI RT/RW',
+    'Web Developer - Crypto TopUp',
     'Backend - Jaya Laundry UMKM',
+    'SysAdmin - ERPNext v16 Docker',
   ];
 
   @override
@@ -22,18 +23,21 @@ class ProfilePage extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0), // Padding dirapikan
         child: Column(
           children: [
             const ProfileAvatar(),
             const SizedBox(height: 16),
             ProfileInfo(name: userName, role: role),
-            const SizedBox(height: 24),
+            const SizedBox(height: 24), // Jarak proporsional
+            
+            // Tombol edit MASIH KOSONG fungsinya
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.edit),
               label: const Text('Edit Profil'),
             ),
+            
             const SizedBox(height: 24),
             const ProfileStats(),
             const SizedBox(height: 24),
